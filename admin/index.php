@@ -71,10 +71,15 @@ $articles = $query->fetchAll();
 
                 <div class="d-flex align-items-center justify-content-between pb-4">
                     <h3 class="pb-3">Gestion des articles</h3>
-                    <a href="./admin/add.php" title="Ajouter un article" class="btn btn-success">
+                    <a href="add.php" title="Ajouter un article" class="btn btn-success">
                         Nouvel article
                     </a>
                 </div>
+
+                <?php if(isset($_GET['successAdd'])): ?>
+                    <div class="alert alert-success pb-4">L'article a bien ajoute</div>
+
+                    <?php endif; ?>
 
                 <table class="table table-striped table-hover">
                     <thead>
